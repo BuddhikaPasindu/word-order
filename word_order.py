@@ -1,4 +1,9 @@
-n = int(input("\n"))
+n_str = input("Enter Number: ")
+try:
+    n = int(n_str)
+except:
+    print('Invalid Number')
+
 words = dict()
 for i in range(n):
     word = input("\n")
@@ -7,12 +12,8 @@ for i in range(n):
     else:
         words[word] = 1
 
-length = len(words)    
+length = len(words)
 print(length)
 counts = list(words.values())
 for count in counts:
     print(count, end=' ')
-
-
-    
-
